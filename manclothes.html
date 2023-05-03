@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    #box{
+        width: 800px;
+        height: 500px;
+        border: 5px solid black;
+        background-color: red;
+        margin: 100px auto;
+    }
+    #content{
+        width:300px;
+        height: 50px;
+        font-size: 20px;
+        text-align: center;
+        line-height: 50px;
+        background-color: white;
+        position: relative;
+        top:200px;
+        left:250px;
+    }
+    ul{
+        position: relative;
+        top: 250px;
+        left: 100px;
+        
+    }
+    ul li{
+        float: left;
+        list-style: none;
+        height: 100px;
+        width: 110px;
+        border: 2px solid black;
+        margin-right: 50px;
+        text-align: center;
+        line-height: 100px;
+        font-size: 30px;
+        background-color: aqua;
+        
+    }
+    </style>
+</head>
+<body>
+    
+    <div id="box">
+        <div id="content">Welcome to my Website</div>
+        <ul>
+            <li id="Man" onclick="website('Man')">Man</li>
+            <li id="woman" onclick="website('woman')">Woman</li>
+            <li id="children" onclick="website('children')">Children</li>
+            <li id="phone" onclick="website('phone')">Phone</li>
+        </ul>
+    </div>
+
+    <script>
+        function website(demo){
+         if(demo=='Man'){
+            document.getElementById("box").style.background="url('man clothes.jpg')";
+            document.getElementById('Man').innerHTML="Man"
+            document.getElementById("content").innerHTML=("Man Website")
+            document.getElementById('woman').innerHTML=('<img src="man clothes.jpg" width="110px" height="100px" alt="">')
+            document.getElementById('children').innerHTML=('<img src="man clothes.jpg" width="110px" height="100px" alt="">')
+            document.getElementById('phone').innerHTML=('<img src="man clothes.jpg" width="110px" height="100px" alt="">')
+         }
+       else if(demo=='woman'){
+            document.getElementById("box").style.background="url('woman clothes.webp')";
+            document.getElementById('woman').innerHTML="woman";
+            document.getElementById("content").innerHTML=("woman clothes")
+            document.getElementById('Man').innerHTML=('<img src="woman clothes.webp" width="110px" height="100px" alt="">')
+            document.getElementById('children').innerHTML=('<img src="woman clothes.webp" width="110px" height="100px" alt="">')
+            document.getElementById('phone').innerHTML=('<img src="woman clothes.webp" width="110px" height="100px" alt="">')
+         }
+         else if(demo=='children'){
+            document.getElementById("box").style.background="url('children clothes.jpg')";
+            document.getElementById('children').innerHTML="children";
+            document.getElementById("content").innerHTML=("children clothes")
+            document.getElementById('Man').innerHTML=('<img src="children clothes.jpg" width="110px" height="100px" alt="">')
+            document.getElementById('woman').innerHTML=('<img src="children clothes.jpg" width="110px" height="100px" alt="">')
+            document.getElementById('phone').innerHTML=('<img src="children clothes.jpg" width="110px" height="100px" alt="">')
+         }
+         else if(demo=='phone'){
+            document.getElementById("box").style.background="url('phone.jpg')";
+            document.getElementById("phone").innerHTML="Phone";
+            document.getElementById("content").innerHTML=("Phone ")
+            document.getElementById('Man').innerHTML=('<img src="phone.jpg" width="100px" height="110px" alt="">')
+            document.getElementById('woman').innerHTML=('<img src="phone.jpg" width="100px" height="110px" alt="">')
+            document.getElementById('children').innerHTML=('<img src="phone.jpg" width="100px" height="110px" alt="">')
+         }
+        }
+    </script>
+</body>
+</html>
